@@ -1,5 +1,13 @@
 from numpy import *
 
+def gradient_decent_runner(points,starting_b,starting_m,num_iterations);
+    b = starting_b
+    m = starting_m
+    for i in range(num_iterations):
+      b, m = step_gradient(b, m, array(points), learnin_rate)
+    return [b,m]
+    
+
 def run(): 
   points = genfromtext('stockdata.csv', delimiter=',')
   #hyperparameter
