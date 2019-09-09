@@ -5,20 +5,22 @@ def compute_error_for_given(b, m, points):
     totalError = 0
     for i in range(0, len(points)):
         x = points[i, 0]
-        y = points[0, i]
-        totalError += (y - (m * x - b)) ** 2
+        y = points[i, 1]
+        totalError += (y - (m * x + b)) ** 2
     return totalError / float(len(points))
 
 
-def step_gradient(current_b, current_m, points, learningRate):
+def step_gradient(b_current, m_current, points, learningRate):
     # defining how to make the single line, single instance
+    b_gradient = 0
+    m_gradient = 0
 
 
 def gradient_decent_runner(points, starting_b, starting_m, num_iterations):
     b = starting_b
     m = starting_m
     for i in range(num_iterations):
-        b, m = step_gradient(b, m, array(points), learnin_rate)
+        b, m = step_gradient(b, m, array(points), learning_rate)
     return [b, m]
 
 
