@@ -14,6 +14,7 @@ def step_gradient(b_current, m_current, points, learningRate):
     # defining how to make the single line, single instance
     b_gradient = 0
     m_gradient = 0
+# didn't finish this as it wasn't needed for homework and had to move on.
 
 
 def gradient_decent_runner(points, starting_b, starting_m, num_iterations):
